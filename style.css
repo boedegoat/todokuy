@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #00b09b, #96c93d);
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.todo-input,
+.todo-btn {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background: #fff;
+  border: none;
+  outline: none;
+}
+
+.todo-btn {
+  color: #00b09b;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid; */
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.todo-item {
+  flex: 1;
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.check-btn,
+.trash-btn {
+  padding: 0.8rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+}
+
+.check-btn {
+  background-color: rgb(19, 146, 83);
+}
+.check-btn:hover {
+  background-color: rgb(14, 112, 63);
+}
+.trash-btn {
+  background-color: rgb(255, 91, 27);
+}
+.trash-btn:hover {
+  background-color: rgb(212, 72, 16);
+}
+
+.fas {
+  pointer-events: none;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem);
+  opacity: 0.2;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 112, 63);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.select:hover::after {
+  background-color: white;
+  color: rgb(14, 112, 63);
+}
