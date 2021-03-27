@@ -21,11 +21,19 @@ function addTodo(e) {
 
   // bikin li
   const newTodo = document.createElement('input')
+  if (!todoInput.value) {
+    alert('Can not use empty value')
+    return
+  }
   newTodo.value = todoInput.value
   newTodo.classList.add('todo-item')
+
+  // save to local storage
   saveToLocal(newTodo.value)
 
-  newTodo.addEventListener('change', () => saveToLocal(newTodo.value))
+  newTodo.addEventListener('change', function () {
+    editTodo(todo, newTodo.value)
+  })
 
   // gabung
   todoDiv.appendChild(newTodo)
@@ -51,6 +59,8 @@ function addTodo(e) {
 
   // clear input value
   todoInput.value = ''
+
+  location.reload()
 }
 
 function checkOrDelete(e) {
